@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
 
@@ -10,15 +10,15 @@ interface IProps {
 
 const NavButton = ({ title, path, style }: IProps) => {
   return (
-    <TouchableOpacity
+    <Link href={path}
       style={[styles.container, style]}
     >
-      <Link href={path}
+      <Text
         style={[styles.text]}
       >
         {title}
-      </Link>
-    </TouchableOpacity>
+      </Text>
+    </Link>
   )
 }
 
@@ -26,8 +26,8 @@ export default NavButton
 
 const styles = StyleSheet.create({
   container: {
-    width: '50%',
     paddingVertical: 10,
+    paddingHorizontal: 40,
     backgroundColor: 'green',
     borderRadius: 10,
     justifyContent: 'center',
