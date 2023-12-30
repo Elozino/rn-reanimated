@@ -48,7 +48,7 @@ export default function App() {
       ]} />
       <NavButton
         title='Next'
-        path='/part4'
+        path='/part2'
         style={{ marginTop: 100 }}
       />
     </View>
